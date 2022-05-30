@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from django.views import generic, view
+from django.views import generic, View
 from .models import Post
 
 
@@ -23,7 +23,7 @@ class PostDetail(View):
         'post_details.html', 
         { 
             'post': post,
-            'comments' : comments,
+            'comments': comments,
             'liked': liked
 
         }
